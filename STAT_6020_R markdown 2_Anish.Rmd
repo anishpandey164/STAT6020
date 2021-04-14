@@ -74,4 +74,4 @@ datatable(iris, options = list(pageLength = 5))
 
 # Embedded source code available for download
 
-[Git Hub repository URL](https://github.com/anishpandey164/STAT-6020-source-files)
+[Git Hub repository URL](https://github.com/anishpandey164/STAT6020)
