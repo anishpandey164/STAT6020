@@ -1,0 +1,77 @@
+---
+title: "22 - R Markdown - Part 2"
+output: 
+  html_document:
+    theme:  sandstone
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+---
+
+# Side-by-Side Figures
+
+<span style="color: green;">Utilizing par function we display images side by side below as well as priting this text in color using span html element. </span>
+
+
+```{r fig.show='hold', out.width="50%", warning=FALSE}
+
+xvec1<- c(seq(from=0,to=100))
+xvec2<- c(seq(from=0,to=100))
+yvec1<- c(seq(from=378,to=478))
+yvec2<- c(seq(from=987,to=887))
+
+# left image
+plot(xvec1,yvec1)
+
+# right image
+plot(xvec2,yvec2)
+```
+
+# Condensed Data frame
+
+```{r message=FALSE, warning=FALSE}  
+library(tidyverse)
+airquality
+
+```
+
+# Tabs {.tabset}
+<span style="color: green;"> Utilizing tabs function we create 4 tabs to show data about health checkup as well as printing this text in color using span html element. </span>
+
+
+## tab 1
+
+Weight measured as 75kgs
+
+## tab 2 
+
+Height measured as 175cm
+
+## tab 3
+
+Body fat percentage calculated as 16.7%
+
+## tab 4
+
+Resulting BMI is 24.5
+
+# Themes
+
+<span style="color: green;"> We have applied sandstone theme from bootswatch in this html document using theme in YAML header </span>
+
+# HTML Widgets
+
+## datatables
+
+<span style="color: green;"> Utilizing html widgets and DT package we created an interactive, scrollable and searchable data table </span>
+
+```{r warning=FALSE}
+library(DT)
+datatable(iris, options = list(pageLength = 5))
+```
+
+# Embedded source code available for download
+
+[Git Hub repository URL](https://github.com/anishpandey164/STAT-6020-source-files)
